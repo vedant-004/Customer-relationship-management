@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "762e5be5-daaf-4360-a1ac-f0b4c0d73020",
+		"name": "Xeno",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43352285",
+		"_collection_link": "https://lively-space-233870.postman.co/workspace/Express-Requests~61b3d32a-38fa-4604-a7a5-15111542a2e1/collection/43352285-762e5be5-daaf-4360-a1ac-f0b4c0d73020?action=share&source=collection_link&creator=43352285"
+	},
+	"item": [
+		{
+			"name": "Creating User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDcyOTI4MjYxMjA5NTgzNTk5OTkiLCJlbWFpbCI6InByaXlhbnNodXBhbmRleTkyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYmYiOjE3NDg4NDUxMTQsIm5hbWUiOiJQcml5YW5zaHUgUGFuZGV5IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0lDMUJQY05oem8yVGdrbVhLd2dWTEZzSF9vVXAxSlktWXZzdk5oRWNhMmYxSlRTT0taNnc9czk2LWMiLCJnaXZlbl9uYW1lIjoiUHJpeWFuc2h1IiwiZmFtaWx5X25hbWUiOiJQYW5kZXkiLCJpYXQiOjE3NDg4NDU0MTQsImV4cCI6MTc0ODg0OTAxNCwianRpIjoiYjY3MmM4NzQyYTAwNjAxZDk0MDA2ZDQ3YzE3YTA2ZTA2MmRjMTRhMiJ9.AUh4Ksx1mJ3mKka4ilOeZ5VikhAEq351wzW86W7Ww4aW1_GY-Jaj1oEVvYNrxOruzCx4oB0jzpvhcXy9Fq6QUW0Vwa3mVCTINfnhW1sURUYYDckgSauucFY_Bhhu5dN7qpVGiOoupFnOL5DfuYj1Ge9t2ueNHRZq4PYVcXYrhAlegHEWoQQIyF-sdBY-0VnuC8J3K8BIwhTgYbx40uZ-x5Eafg8btCq-30f3ObCVD0T-4PAmriGsCfclkFdrie50Mpzpg9p2IbHfDiDBt177RqkYSlZmRbhpW-YwG61k2A0c5JGzincKOgKB4OtYrxfa89Rx75ARvaMrawek8_bcwA",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw\"\n}"
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/users/create",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting User by Email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDcyOTI4MjYxMjA5NTgzNTk5OTkiLCJlbWFpbCI6InByaXlhbnNodXBhbmRleTkyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYmYiOjE3NDg4NDUxMTQsIm5hbWUiOiJQcml5YW5zaHUgUGFuZGV5IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0lDMUJQY05oem8yVGdrbVhLd2dWTEZzSF9vVXAxSlktWXZzdk5oRWNhMmYxSlRTT0taNnc9czk2LWMiLCJnaXZlbl9uYW1lIjoiUHJpeWFuc2h1IiwiZmFtaWx5X25hbWUiOiJQYW5kZXkiLCJpYXQiOjE3NDg4NDU0MTQsImV4cCI6MTc0ODg0OTAxNCwianRpIjoiYjY3MmM4NzQyYTAwNjAxZDk0MDA2ZDQ3YzE3YTA2ZTA2MmRjMTRhMiJ9.AUh4Ksx1mJ3mKka4ilOeZ5VikhAEq351wzW86W7Ww4aW1_GY-Jaj1oEVvYNrxOruzCx4oB0jzpvhcXy9Fq6QUW0Vwa3mVCTINfnhW1sURUYYDckgSauucFY_Bhhu5dN7qpVGiOoupFnOL5DfuYj1Ge9t2ueNHRZq4PYVcXYrhAlegHEWoQQIyF-sdBY-0VnuC8J3K8BIwhTgYbx40uZ-x5Eafg8btCq-30f3ObCVD0T-4PAmriGsCfclkFdrie50Mpzpg9p2IbHfDiDBt177RqkYSlZmRbhpW-YwG61k2A0c5JGzincKOgKB4OtYrxfa89Rx75ARvaMrawek8_bcwA",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/users/getUserByEmail?email=tyagivedant3846@gmail.com",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"getUserByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "tyagivedant3846@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingesting Customers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1f03f7e8-e0d7-4080-8d52-4626d8e17504"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/uploads/customers",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"uploads",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting all Customers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/customers/getAllCustomers",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"customers",
+						"getAllCustomers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingesting Orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1f03f7eb-6195-4cb0-ad39-15feda56b803"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/uploads/orders",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"uploads",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting all Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/orders/getAllOrders",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"orders",
+						"getAllOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Segment Rule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"logicType\": \"AND\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"op\": \">\",\n      \"value\": 30\n    },\n    {\n      \"field\": \"location\",\n      \"op\": \"==\",\n      \"value\": \"Delhi\"\n    }\n  ]\n}\n"
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/segmentRules/create",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"segmentRules",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting all Segment Rules",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/segmentRules/getAllSegmentRules",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"segmentRules",
+						"getAllSegmentRules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Campaign Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2NTUwMDEzMzUzNTcta2tqMG00NTVkcnViZTkxYnNvYjFiZHJxN2hkMDdpOWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTc2MDY4NDA5MjI4MzczOTkzMzQiLCJlbWFpbCI6InBpeXVwYW5kZXk5MjFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc0ODg3MjMwMCwibmFtZSI6IlByaXlhbnNodSBQYW5kZXkiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGpjcGFZNUlsT004bWNUYVN3Q0tLa0JrQUNoZFBiVm84ZTlENTZyOVJPZVFRV3F3PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByaXlhbnNodSIsImZhbWlseV9uYW1lIjoiUGFuZGV5IiwiaWF0IjoxNzQ4ODcyNjAwLCJleHAiOjE3NDg4NzYyMDAsImp0aSI6ImFiZmM2ZjE1Mzg4MjBmYjA3N2YyNmY4N2Y3MzczZTYyODk1Y2VkYzQifQ.RocVAEBYd9H8cMD_rj7GDksykSx0JvpZVqPtEqoyqqEhYnCSk45F7mFo_BGS1-A0uy39JWl72t1mZI77OHSHTViWLQS5wn79AibrQ2jHAPFI-KuoLUq2c2n65kzeCB26_0_ohsiHUw3Hm0PdtPTVgs6QR1yB178-ayEEjr8clc92C801I1z5LT_cPEhRQv6e4j8DgXZhwkvDdJP-CVyv7hNSh7RfWrcExhBmVPwkFdoejKwEIKdWJItZiwd4HSQK4_lb--AcBpb1Z3bqZi856-0ylQB6t6KVWXHvYvYzRI4SQQ_fuYMXyUjwGzWooRCm4xaWNEIKJYUkCtqVuZA6Sw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Summer Discount Campaign\",\n  \"ruleId\": \"664f2ae0b6f2cabc1234abcd\",\n  \"customerIds\": [\"665f13e0a1b2cd3456ef7890\", \"665f13e0a1b2cd3456ef7891\"],\n  \"message\": \"Hey there! Enjoy 20% off this summer on all items.\",\n  \"intent\": \"promotional\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://xeno-crm-render.onrender.com/api/campaigns/create",
+					"protocol": "https",
+					"host": [
+						"xeno-crm-render",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"campaigns",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
